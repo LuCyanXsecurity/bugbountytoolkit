@@ -1,0 +1,30 @@
+# Bug Bounty Toolkit - robots.txt
+# https://bugbountytoolkit.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://bugbountytoolkit.vercel.app/sitemap.xml
+
+# Crawl delay (optional, for rate limiting)
+Crawl-delay: 1
+
+# Allow all search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /

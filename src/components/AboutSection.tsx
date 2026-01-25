@@ -31,7 +31,7 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="glass rounded-2xl overflow-hidden glow-red-hover">
             <div className="md:flex">
               {/* Profile Image */}
@@ -46,15 +46,15 @@ const AboutSection = () => {
               </div>
 
               {/* Profile Info */}
-              <div className="p-8 md:w-2/3">
-                <div className="flex items-center gap-3 mb-4">
-                  <h3 className="text-2xl font-bold text-white">LuCyanXsecurity</h3>
-                  <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400 border border-green-500/30">
+              <div className="p-10 md:w-2/3">
+                <div className="flex items-center gap-3 mb-5">
+                  <h3 className="text-3xl font-bold text-white">LuCyanXsecurity</h3>
+                  <span className="px-3 py-1 rounded-full text-sm font-medium bg-green-500/20 text-green-400 border border-green-500/30">
                     Available
                   </span>
                 </div>
 
-                <p className="text-gray-400 mb-6 leading-relaxed">
+                <p className="text-gray-400 mb-8 leading-relaxed text-lg">
                   Security researcher focused on bug bounty hunting, vulnerability assessment, and ethical hacking.
                   Passionate about discovering security flaws and supporting the cybersecurity community through
                   continuous learning and responsible disclosure.
@@ -92,7 +92,7 @@ const AboutSection = () => {
                       <div className={`${skill.color} group-hover:scale-110 transition-transform duration-200`}>
                         {skill.icon}
                       </div>
-                      <span className="text-gray-300 text-sm font-medium">{skill.label}</span>
+                      <span className="text-gray-300 text-base font-medium">{skill.label}</span>
                     </div>
                   ))}
                 </div>

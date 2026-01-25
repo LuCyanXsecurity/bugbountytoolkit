@@ -123,7 +123,7 @@ const CommandsSection = () => {
         </div>
 
         {/* Search and Filter Bar */}
-        <div className="max-w-4xl mx-auto mb-8">
+        <div className="max-w-5xl mx-auto mb-10">
           {/* Search Input */}
           <div className="relative mb-4">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
@@ -165,7 +165,7 @@ const CommandsSection = () => {
               </button>
             </div>
 
-            <div className="text-sm text-gray-500">
+            <div className="text-base text-gray-500">
               Showing <span className="text-red-400 font-medium">{filteredCommands}</span> of {totalCommands} commands
               in <span className="text-red-400 font-medium">{filteredCategories.length}</span> categories
             </div>
@@ -189,7 +189,7 @@ const CommandsSection = () => {
         </div>
 
         {/* Command Categories */}
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {filteredCategories.length === 0 ? (
             <div className="text-center py-12 glass rounded-xl">
               <div className="text-6xl mb-4">🔍</div>

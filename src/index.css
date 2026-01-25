@@ -26,6 +26,8 @@
     /* Dark background for overscroll areas */
     overscroll-behavior: none;
     /* Prevent scroll bounce */
+    font-size: 17px;
+    /* Optimized for readability as requested */
   }
 
   body {
@@ -325,7 +327,7 @@
 
   /* Button Styles */
   .btn-primary {
-    @apply bg-gradient-to-r from-red-600 to-red-500 text-white font-medium py-3 px-6 rounded-lg;
+    @apply bg-gradient-to-r from-red-600 to-red-500 text-white font-semibold py-4 px-8 rounded-xl text-lg;
     transition: all 0.3s ease;
   }
 
@@ -336,7 +338,7 @@
   }
 
   .btn-secondary {
-    @apply bg-gray-800 text-white font-medium py-3 px-6 rounded-lg border border-gray-700;
+    @apply bg-gray-800 text-white font-semibold py-4 px-8 rounded-xl border border-gray-700 text-lg;
     transition: all 0.3s ease;
   }
 
@@ -347,7 +349,7 @@
 
   /* Code Block Styles */
   .code-block {
-    @apply bg-gray-950 rounded-lg font-mono text-sm;
+    @apply bg-gray-950 rounded-xl font-mono text-base;
     border: 1px solid rgba(239, 68, 68, 0.2);
   }
 
@@ -402,7 +404,7 @@
   }
 
   .stats-card .stats-number {
-    @apply text-4xl font-bold gradient-text;
+    @apply text-5xl font-bold gradient-text;
   }
 
   /* Command Card */
@@ -417,16 +419,16 @@
 
   /* Section Title */
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-white mb-4;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6;
   }
 
   .section-subtitle {
-    @apply text-gray-400 max-w-2xl mx-auto;
+    @apply text-gray-400 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed;
   }
 
   /* Input Styles */
   .input-search {
-    @apply w-full bg-gray-900/80 border border-gray-700 rounded-xl px-5 py-4 text-white;
+    @apply w-full bg-gray-900/80 border border-gray-700 rounded-xl px-6 py-5 text-white text-lg;
     @apply placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500/50 focus:border-red-500/50;
     transition: all 0.3s ease;
   }
@@ -437,7 +439,7 @@
 
   /* Filter Button */
   .filter-btn {
-    @apply px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200;
+    @apply px-5 py-3 rounded-xl text-base font-medium transition-all duration-200;
     @apply bg-gray-800 text-gray-400 border border-gray-700;
   }
 

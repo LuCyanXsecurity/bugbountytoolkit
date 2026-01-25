@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Menu, X, ShieldAlert, Github } from 'lucide-react';
 
 const Header = () => {
@@ -21,10 +21,10 @@ const Header = () => {
           {/* Logo */}
           <a href="#" className="flex items-center space-x-3 group">
             <div className="relative">
-              <ShieldAlert className="w-9 h-9 text-red-500 group-hover:scale-110 transition-transform duration-300" />
+              <ShieldAlert className="w-10 h-10 text-red-500 group-hover:scale-110 transition-transform duration-300" />
               <div className="absolute inset-0 bg-red-500/20 blur-lg group-hover:blur-xl transition-all duration-300" />
             </div>
-            <span className="text-xl font-bold">
+            <span className="text-2xl font-bold">
               <span className="text-white">Bug Bounty</span>
               <span className="gradient-text ml-1">Toolkit</span>
             </span>
@@ -36,7 +36,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="relative px-4 py-2 text-gray-400 hover:text-white transition-all duration-300 group"
+                className="relative px-5 py-2 text-gray-400 hover:text-white transition-all duration-300 group text-lg"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-red-500 to-purple-500 group-hover:w-full group-hover:left-0 transition-all duration-300" />

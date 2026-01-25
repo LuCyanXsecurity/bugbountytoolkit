@@ -59,37 +59,37 @@ const Hero = () => {
 
       <div className="container mx-auto text-center relative z-10">
         {/* Title with Gradient */}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
+        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight">
           <span className="text-white">Bug Bounty </span>
           <span className="gradient-text">Toolkit</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-gray-400 mb-4 max-w-3xl mx-auto">
+        <p className="text-xl md:text-2xl lg:text-3xl text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
           A comprehensive collection of security tools and commands for efficient bug hunting and penetration testing.
         </p>
 
         {/* Stats Preview */}
-        <div className="flex flex-wrap justify-center gap-8 mb-12">
+        <div className="flex flex-wrap justify-center gap-12 mb-14">
           <div className="text-center">
-            <div className="text-3xl font-bold gradient-text">100+</div>
-            <div className="text-gray-500 text-sm">Commands</div>
+            <div className="text-4xl md:text-5xl font-bold gradient-text">100+</div>
+            <div className="text-gray-500 text-base md:text-lg">Commands</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold gradient-text-purple">15+</div>
-            <div className="text-gray-500 text-sm">Categories</div>
+            <div className="text-4xl md:text-5xl font-bold gradient-text-purple">15+</div>
+            <div className="text-gray-500 text-base md:text-lg">Categories</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold gradient-text-cyan">5</div>
-            <div className="text-gray-500 text-sm">Methodologies</div>
+            <div className="text-4xl md:text-5xl font-bold gradient-text-cyan">5</div>
+            <div className="text-gray-500 text-base md:text-lg">Methodologies</div>
           </div>
         </div>
 
         {/* Target Input Card */}
-        <div className="max-w-2xl mx-auto glass rounded-2xl p-8 glow-red-hover">
-          <div className="mb-6">
-            <label htmlFor="target" className="block text-gray-300 text-lg mb-4 flex items-center justify-center">
-              <span className="mr-2 text-2xl">🎯</span> Enter your target domain or IP:
+        <div className="max-w-3xl mx-auto glass rounded-2xl p-10 glow-red-hover">
+          <div className="mb-8">
+            <label htmlFor="target" className="block text-gray-300 text-xl mb-5 flex items-center justify-center">
+              <span className="mr-3 text-3xl">🎯</span> Enter your target domain or IP:
             </label>
             <input
               type="text"

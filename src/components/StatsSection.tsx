@@ -56,25 +56,25 @@ const StatsSection = () => {
             <div className="section-divider mb-16" />
 
             <div className="container mx-auto px-4 relative z-10">
-                <div className="text-center mb-12">
-                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                <div className="text-center mb-14">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
                         Toolkit <span className="gradient-text">Statistics</span>
                     </h2>
-                    <p className="text-gray-500">Everything you need for bug bounty hunting</p>
+                    <p className="text-gray-500 text-lg">Everything you need for bug bounty hunting</p>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 max-w-7xl mx-auto">
                     {stats.map((stat, index) => (
                         <div
                             key={index}
                             className="stats-card group"
                             style={{ animationDelay: `${index * 100}ms` }}
                         >
-                            <div className={`${stat.color} mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300`}>
+                            <div className={`${stat.color} mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300`}>
                                 {stat.icon}
                             </div>
-                            <div className="stats-number mb-1">{stat.value}</div>
-                            <div className="text-gray-400 text-sm">{stat.label}</div>
+                            <div className="stats-number mb-2">{stat.value}</div>
+                            <div className="text-gray-400 text-base">{stat.label}</div>
                         </div>
                     ))}
                 </div>

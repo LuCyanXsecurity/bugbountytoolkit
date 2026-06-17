@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Terminal } from 'lucide-react';
+import { Terminal, ShieldAlert } from 'lucide-react';
 
 const Hero = () => {
   const [target, setTarget] = useState('');
@@ -12,84 +12,56 @@ const Hero = () => {
     window.dispatchEvent(new CustomEvent('targetChange', { detail: value }));
   };
 
-  // Generate particles for background - reduced for better performance
-  const particles = Array.from({ length: 12 }, (_, i) => (
-    <div key={i} className="particle" />
-  ));
-
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 px-4"
       style={{
-        background: 'linear-gradient(135deg, #0f0f1a 0%, #1a0a1a 25%, #0f1a1a 50%, #1a1a0f 75%, #0f0f1a 100%)',
+        background: 'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(99, 102, 241, 0.06) 0%, var(--bg-primary) 70%)',
       }}
     >
-      {/* Animated Background Particles - GPU optimized */}
-      <div className="particles-bg">
-        {particles}
-      </div>
+      {/* Subtle ambient glow */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full opacity-30" style={{ background: 'radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%)' }} />
 
-      {/* Gradient Orbs - Optimized with slower animation and GPU acceleration */}
-      <div
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/8 rounded-full blur-2xl"
-        style={{
-          animation: 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-          transform: 'translateZ(0)',
-          willChange: 'opacity'
-        }}
-      />
-      <div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/8 rounded-full blur-2xl"
-        style={{
-          animation: 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-          animationDelay: '1.5s',
-          transform: 'translateZ(0)',
-          willChange: 'opacity'
-        }}
-      />
-      <div
-        className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500/5 rounded-full blur-2xl"
-        style={{
-          animation: 'pulse 5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-          animationDelay: '2.5s',
-          transform: 'translateZ(0)',
-          willChange: 'opacity'
-        }}
-      />
+      <div className="container mx-auto text-center relative z-10 max-w-4xl">
+        {/* Icon */}
+        <div className="mb-8 flex justify-center">
+          <div className="relative">
+            <ShieldAlert className="w-16 h-16 text-indigo-400/80 animate-float" />
+          </div>
+        </div>
 
-      <div className="container mx-auto text-center relative z-10">
         {/* Title with Gradient */}
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 tracking-tight">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight" style={{ letterSpacing: '-0.04em' }}>
           <span className="text-white">Bug Bounty </span>
           <span className="gradient-text">Toolkit</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl lg:text-3xl text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-zinc-500 mb-4 max-w-2xl mx-auto leading-relaxed">
           A comprehensive collection of security tools and commands for efficient bug hunting and penetration testing.
         </p>
 
         {/* Stats Preview */}
-        <div className="flex flex-wrap justify-center gap-12 mb-14">
+        <div className="flex flex-wrap justify-center gap-10 mb-14">
           <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold gradient-text">100+</div>
-            <div className="text-gray-500 text-base md:text-lg">Commands</div>
+            <div className="text-2xl font-bold gradient-text">100+</div>
+            <div className="text-zinc-600 text-sm mt-1">Commands</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold gradient-text-purple">15+</div>
-            <div className="text-gray-500 text-base md:text-lg">Categories</div>
+            <div className="text-2xl font-bold gradient-text-purple">15+</div>
+            <div className="text-zinc-600 text-sm mt-1">Categories</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold gradient-text-cyan">5</div>
-            <div className="text-gray-500 text-base md:text-lg">Methodologies</div>
+            <div className="text-2xl font-bold gradient-text-cyan">5</div>
+            <div className="text-zinc-600 text-sm mt-1">Methodologies</div>
           </div>
         </div>
 
         {/* Target Input Card */}
-        <div className="max-w-3xl mx-auto glass rounded-2xl p-10 glow-red-hover">
-          <div className="mb-8">
-            <label htmlFor="target" className="block text-gray-300 text-xl mb-5 flex items-center justify-center">
-              <span className="mr-3 text-3xl">🎯</span> Enter your target domain or IP:
+        <div className="max-w-2xl mx-auto rounded-2xl p-8" style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)' }}>
+          <div className="mb-6">
+            <label htmlFor="target" className="block text-zinc-400 text-base mb-4 flex items-center justify-center">
+              <span className="mr-2 text-xl">🎯</span> Enter your target domain or IP:
             </label>
             <input
               type="text"
@@ -97,21 +69,21 @@ const Hero = () => {
               value={target}
               onChange={handleTargetChange}
               placeholder="example.com"
-              className="input-search text-lg"
+              className="input-search text-base"
             />
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="#commands"
-              className="btn-primary flex items-center text-lg"
+              className="btn-primary flex items-center text-sm"
             >
-              <Terminal className="mr-2 w-5 h-5" />
+              <Terminal className="mr-2 w-4 h-4" />
               Explore Commands
             </a>
             <a
               href="#methodology"
-              className="btn-secondary flex items-center text-lg"
+              className="btn-secondary flex items-center text-sm"
             >
               📚 View Methodologies
             </a>

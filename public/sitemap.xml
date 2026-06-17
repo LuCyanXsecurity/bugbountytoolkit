@@ -1,55 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  
-  <!-- Homepage -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bugbountytoolkit.vercel.app/</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://bugbountytoolkit.netlify.app/</loc>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Tools & Commands Section -->
   <url>
-    <loc>https://bugbountytoolkit.vercel.app/#commands</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://bugbountytoolkit.netlify.app/#commands</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-  
-  <!-- Methodology Section -->
   <url>
-    <loc>https://bugbountytoolkit.vercel.app/#methodology</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://bugbountytoolkit.netlify.app/#methodology</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-  
-  <!-- About Section -->
   <url>
-    <loc>https://bugbountytoolkit.vercel.app/#about</loc>
-    <lastmod>2026-01-23</lastmod>
+    <loc>https://bugbountytoolkit.netlify.app/#about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <!-- Contributors Section -->
   <url>
-    <loc>https://bugbountytoolkit.vercel.app/#contributors</loc>
-    <lastmod>2026-01-23</lastmod>
+    <loc>https://bugbountytoolkit.netlify.app/#contributors</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
-  
-  <!-- Contact Section -->
   <url>
-    <loc>https://bugbountytoolkit.vercel.app/#contact</loc>
-    <lastmod>2026-01-23</lastmod>
+    <loc>https://bugbountytoolkit.netlify.app/#contact</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
-  
 </urlset>

@@ -107,11 +107,8 @@ const CommandsSection = () => {
   const filteredCommands = filteredCategories.reduce((acc, cat) => acc + cat.commands.length, 0);
 
   return (
-    <section id="commands" className="py-20 relative">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950" />
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="commands" className="py-24 relative">
+      <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="section-title">
@@ -123,10 +120,10 @@ const CommandsSection = () => {
         </div>
 
         {/* Search and Filter Bar */}
-        <div className="max-w-5xl mx-auto mb-10">
+        <div className="max-w-3xl mx-auto mb-10">
           {/* Search Input */}
           <div className="relative mb-4">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zinc-600 w-5 h-5" />
             <input
               type="text"
               placeholder="Search commands, tools, or keywords..."
@@ -137,23 +134,23 @@ const CommandsSection = () => {
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-white transition-colors"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-600 hover:text-white transition-colors"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4" />
               </button>
             )}
           </div>
 
           {/* Filter Toggle & Stats */}
           <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <button
                 onClick={() => setShowFilters(!showFilters)}
                 className="filter-btn flex items-center gap-2"
               >
                 <Filter className="w-4 h-4" />
                 Filters
-                {showFilters ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                {showFilters ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
               </button>
 
               <button
@@ -165,15 +162,15 @@ const CommandsSection = () => {
               </button>
             </div>
 
-            <div className="text-base text-gray-500">
-              Showing <span className="text-red-400 font-medium">{filteredCommands}</span> of {totalCommands} commands
-              in <span className="text-red-400 font-medium">{filteredCategories.length}</span> categories
+            <div className="text-xs text-zinc-600">
+              Showing <span className="text-indigo-400 font-medium">{filteredCommands}</span> of {totalCommands} commands
+              in <span className="text-indigo-400 font-medium">{filteredCategories.length}</span> categories
             </div>
           </div>
 
           {/* Filter Buttons */}
           {showFilters && (
-            <div className="flex flex-wrap gap-2 p-4 glass rounded-xl animate-scale-in">
+            <div className="flex flex-wrap gap-2 p-4 rounded-xl animate-scale-in" style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)' }}>
               {filterOptions.map(option => (
                 <button
                   key={option.id}
@@ -189,12 +186,12 @@ const CommandsSection = () => {
         </div>
 
         {/* Command Categories */}
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           {filteredCategories.length === 0 ? (
-            <div className="text-center py-12 glass rounded-xl">
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-medium text-white mb-2">No commands found</h3>
-              <p className="text-gray-400">Try adjusting your search or filters</p>
+            <div className="text-center py-16 rounded-xl" style={{ background: 'var(--bg-surface)', border: '1px solid var(--border)' }}>
+              <div className="text-5xl mb-4">🔍</div>
+              <h3 className="text-lg font-medium text-white mb-2">No commands found</h3>
+              <p className="text-zinc-500 text-sm">Try adjusting your search or filters</p>
             </div>
           ) : (
             filteredCategories.map((category, index) => (
@@ -206,12 +203,12 @@ const CommandsSection = () => {
                 <div className="flex items-center gap-2 mb-2">
                   <button
                     onClick={() => toggleFavorite(category.id)}
-                    className={`favorite-btn ${favorites.includes(category.id) ? 'favorited' : 'text-gray-600'}`}
+                    className={`favorite-btn ${favorites.includes(category.id) ? 'favorited' : 'text-zinc-700'}`}
                     title={favorites.includes(category.id) ? 'Remove from favorites' : 'Add to favorites'}
                   >
                     <Star className={`w-4 h-4 ${favorites.includes(category.id) ? 'fill-current' : ''}`} />
                   </button>
-                  <span className="text-xl">{getCategoryIcon(category.id)}</span>
+                  <span className="text-lg">{getCategoryIcon(category.id)}</span>
                   <span className={`badge-${getCategoryType(category.id)} px-2 py-0.5 rounded-full text-xs font-medium`}>
                     {getCategoryType(category.id).toUpperCase()}
                   </span>

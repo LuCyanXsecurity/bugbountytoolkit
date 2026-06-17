@@ -41,33 +41,33 @@ const Command = ({ name, command, description }: CommandProps) => {
       {/* Command Header */}
       <div className="flex items-start justify-between gap-4 mb-2">
         <div className="flex-1">
-          <h4 className="text-white font-medium text-sm group-hover:text-red-400 transition-colors">
+          <h4 className="text-white font-medium text-sm group-hover:text-indigo-400 transition-colors">
             {name}
           </h4>
           {description && (
-            <p className="text-gray-500 text-xs mt-1 line-clamp-2">{description}</p>
+            <p className="text-zinc-600 text-xs mt-1 line-clamp-2">{description}</p>
           )}
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5">
           {isMultiCommand && (
             <button
               onClick={() => setExpanded(!expanded)}
-              className="p-1.5 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-white transition-all"
+              className="p-1.5 rounded-md text-zinc-600 hover:text-zinc-300 hover:bg-zinc-800/50 transition-all"
               title={expanded ? 'Collapse' : 'Expand'}
             >
-              {expanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+              {expanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
             </button>
           )}
           <button
             onClick={copyToClipboard}
-            className={`p-1.5 rounded-lg transition-all duration-200 ${copied
-                ? 'bg-green-500/20 text-green-400'
-                : 'bg-gray-800 hover:bg-red-500/20 text-gray-400 hover:text-red-400'
+            className={`p-1.5 rounded-md transition-all duration-200 ${copied
+                ? 'text-emerald-400 bg-emerald-500/10'
+                : 'text-zinc-600 hover:text-zinc-300 hover:bg-zinc-800/50'
               }`}
             title="Copy command"
           >
-            {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+            {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
           </button>
         </div>
       </div>
@@ -77,11 +77,11 @@ const Command = ({ name, command, description }: CommandProps) => {
         }`}>
         <div className="p-3 overflow-x-auto">
           {displayCommands.map((cmd, idx) => (
-            <pre key={idx} className="text-gray-300 text-xs leading-relaxed whitespace-pre-wrap break-all">
+            <pre key={idx} className="text-zinc-400 text-xs leading-relaxed whitespace-pre-wrap break-all font-mono">
               <code>
                 {cmd.split('\n').map((line, lineIdx) => (
-                  <div key={lineIdx} className="hover:bg-gray-800/50 px-1 -mx-1 rounded">
-                    <span className="text-red-400/60 select-none mr-2">$</span>
+                  <div key={lineIdx} className="hover:bg-zinc-800/30 px-1 -mx-1 rounded">
+                    <span className="text-zinc-700 select-none mr-2">$</span>
                     {line}
                   </div>
                 ))}

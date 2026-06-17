@@ -3,15 +3,15 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      container: {
-        center: true,
-        padding: '1.5rem',
-        screens: {
-          sm: '640px',
-          md: '768px',
-          lg: '1024px',
-          xl: '1280px',
-          '2xl': '1536px',
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Menlo', 'Monaco', 'monospace'],
+      },
+      colors: {
+        surface: {
+          DEFAULT: '#111113',
+          elevated: '#18181b',
+          overlay: '#1c1c1f',
         },
       },
     },

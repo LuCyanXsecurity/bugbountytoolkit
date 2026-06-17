@@ -25,12 +25,12 @@ const AdvancedMethodology: React.FC<AdvancedMethodologyProps> = ({ methodology }
           {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
         </span>
       </button>
-
+      
       {isOpen && (
         <div className="p-4 pt-0 bg-gray-800">
           <div className="space-y-4">
             {methodology.commands.map((command, index) => (
-              <Command key={`${methodology.id}-${index}`} {...command} />
+              <Command key={`${methodology.id}-${index}`} command={command} />
             ))}
           </div>
         </div>

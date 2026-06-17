@@ -3,7 +3,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import Seo from './components/Seo';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import StatsSection from './components/StatsSection';
 import CommandsSection from './components/CommandsSection';
 import MethodologySection from './components/MethodologySection';
 import AboutSection from './components/AboutSection';
@@ -47,7 +46,6 @@ function App() {
       <div className="min-h-screen">
         <Header />
         <Hero />
-        <StatsSection />
         <CommandsSection />
         <MethodologySection />
         <AboutSection />

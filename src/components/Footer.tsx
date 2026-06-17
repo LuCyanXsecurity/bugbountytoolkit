@@ -110,7 +110,7 @@ const Footer = () => {
               Follow for the latest security tools and techniques.
             </p>
             <a
-              href="https://github.com/LuCyanXsecurity/Bug-Bounty-Toolkit"
+              href="https://github.com/LuCyanXsecurity/bugbountytoolkit"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white transition-all duration-200"

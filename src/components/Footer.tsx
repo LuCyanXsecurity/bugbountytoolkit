@@ -1,4 +1,4 @@
-import { Github, Twitter, Heart, ExternalLink } from 'lucide-react';
+import { Github, Twitter, ExternalLink } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -33,7 +33,7 @@ const Footer = () => {
               <span className="text-base font-semibold text-white">Bug Bounty Toolkit</span>
             </div>
             <p className="text-zinc-600 text-sm leading-relaxed mb-6">
-              A comprehensive resource for security researchers and bug bounty hunters. Built with ❤️ for the cybersecurity community.
+              A comprehensive resource for security researchers and bug bounty hunters. Built for the cybersecurity community.
             </p>
             <div className="flex gap-2">
               <a
@@ -129,7 +129,7 @@ const Footer = () => {
               © {currentYear} Bug Bounty Toolkit. All rights reserved.
             </p>
             <p className="text-zinc-600 text-xs flex items-center gap-1">
-              Made with <Heart className="w-3 h-3 text-indigo-400 fill-current" /> by
+              Made by
               <a href="https://github.com/LuCyanXsecurity" target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-white transition-colors">
                 LuCyanXsecurity
               </a>
